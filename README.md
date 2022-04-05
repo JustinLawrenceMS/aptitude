@@ -32,8 +32,17 @@ the app root directory.
 Do this:
 
 ```
+./vendor/bin/sail php artisan key:generate
 ./vendor/bin/sail php artisan migrate
 ./vendor/bin/sail php artisan db:seed
 ./vendor/bin/sail npm install && npm run dev
 ```
 
+You can login with one of the users from the Factory generated data or you can
+register your own username.  If you want to try a fake account, look up the email
+on Tinker
+```
+./vendor/bin/sail php artisan tinker
+>>> User::get();
+```
+Copy the email address.  The password is 'password'
